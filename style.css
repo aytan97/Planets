@@ -1,0 +1,127 @@
+.planets {
+    width: 100%;
+
+}
+
+.sun {
+    background-color: yellow;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    animation: sun 5s ease infinite;
+    border-bottom: 1px solid red;
+    margin: -70px auto;
+    background: radial-gradient(circle at 100px 100px, yellow, rgb(187, 187, 187));
+    position: relative;
+}
+
+@keyframes sun {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+
+}
+
+.moon {
+    background-color: gray;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    animation: moon 5s ease infinite, move 3s ease infinite;
+    border-bottom: 1px solid red;
+    background: radial-gradient(circle at 100px 100px, rgba(183, 183, 183, 0.717), rgb(253, 252, 252));
+    position: relative;
+    z-index: -3;
+}
+
+
+@keyframes moon {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(100px);
+    }
+
+    100% {
+        transform: translate(0px);
+        z-index: 1;
+    }
+}
+
+.earth {
+    background-color: rgb(101, 146, 119);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    align-items: center;
+    animation: earth 5s ease infinite;
+    border-bottom: 1px solid red;
+    background: radial-gradient(circle at 100px 100px, rgba(129, 192, 135, 0.858), rgb(187, 187, 187));
+    position: absolute;
+    margin-left: 30px;
+}
+
+@keyframes earth {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.planets-move {
+    width: fit-content;
+    height: fit-content;
+    animation: planets-move 40s ease infinite;
+    position: relative;
+    margin-top: 100px;
+}
+
+@keyframes planets-move {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(700px);
+    }
+
+    100% {
+        transform: translate(0px);
+        z-index: 5;
+    }
+}
